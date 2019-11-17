@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="这可能是史上最全的CSS自适应布局总结教程所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局。 大体上，布局中会用到的有：尺寸相关的盒子模型，普通流、浮动、绝对定位三种定位机制，CSS3中的transform、弹性盒子模块、试验中的grid模块。逛园子的时候经常可以看到浮动布局，inline-block布局，弹性盒布局这几个名词。现在对布局也算有一点了解，">
+<meta name="keywords" content="君须知，未见之处，犹多宝藏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="这可能是史上最全的CSS自适应布局总结教程">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;17&#x2F;%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8%E7%9A%84CSS%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93%E6%95%99%E7%A8%8B&#x2F;index.html">
+<meta property="og:site_name" content="White 的个人博客">
+<meta property="og:description" content="这可能是史上最全的CSS自适应布局总结教程所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局。 大体上，布局中会用到的有：尺寸相关的盒子模型，普通流、浮动、绝对定位三种定位机制，CSS3中的transform、弹性盒子模块、试验中的grid模块。逛园子的时候经常可以看到浮动布局，inline-block布局，弹性盒布局这几个名词。现在对布局也算有一点了解，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https:&#x2F;&#x2F;images2015.cnblogs.com&#x2F;blog&#x2F;933778&#x2F;201604&#x2F;933778-20160422153325538-411305977.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;images2015.cnblogs.com&#x2F;blog&#x2F;933778&#x2F;201604&#x2F;933778-20160422153326538-861607441.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;images2015.cnblogs.com&#x2F;blog&#x2F;933778&#x2F;201604&#x2F;933778-20160422153327507-1666485195.jpg">
+<meta property="og:updated_time" content="2019-11-17T08:45:58.822Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;images2015.cnblogs.com&#x2F;blog&#x2F;933778&#x2F;201604&#x2F;933778-20160422153325538-411305977.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/11/17/这可能是史上最全的CSS自适应布局总结教程/"/>
+
+
+
+
+
+  <title>这可能是史上最全的CSS自适应布局总结教程 | White 的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/whitechiina" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#f55555; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">White 的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">君须知，未见之处，犹多宝藏</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/17/%E8%BF%99%E5%8F%AF%E8%83%BD%E6%98%AF%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8%E7%9A%84CSS%E8%87%AA%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="White">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="White 的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">这可能是史上最全的CSS自适应布局总结教程</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-17T16:25:06+08:00">
+                2019-11-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  3.9k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  13分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="这可能是史上最全的CSS自适应布局总结教程"><a href="#这可能是史上最全的CSS自适应布局总结教程" class="headerlink" title="这可能是史上最全的CSS自适应布局总结教程"></a>这可能是史上最全的CSS自适应布局总结教程</h3><p>所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局。</p>
+<p>大体上，布局中会用到的有：尺寸相关的盒子模型，普通流、浮动、绝对定位三种定位机制，CSS3中的transform、弹性盒子模块、试验中的grid模块。逛园子的时候经常可以看到浮动布局，inline-block布局，弹性盒布局这几个名词。现在对布局也算有一点了解，做个总结巩固一下。如果你也看了很多资料，但是实际动手时对布局还是无从下手的话，希望本文可以帮你理清思路。</p>
+<p>唠叨一句：看到一个效果图的时候，千万不要急着手贱去敲代码！先思考清楚页面的构造，理清各元素之间的关系，特别需要注意的是在不同的设备下需要有怎样的展现，当你思路清晰找到最好的布局方案时，coding其实真的不需要多少时间。</p>
+<h2 id="尺寸相关"><a href="#尺寸相关" class="headerlink" title="尺寸相关"></a>尺寸相关</h2><p>为什么要先说尺寸呢？因为尺寸在布局中的作用非常核心，布局方式定位这些只是改变了元素之间的关系，没有尺寸就什么也不是。比如我们通常会用margin来控制跟其他元素的距离，这就是布局。</p>
+<p>很多人都会觉得，什么width、margin太简单了，早就掌握了。这种心态我一开始学习CSS的时候也有，觉得很好理解很简单，但是后面才发现自己原来很多东西都没真正掌握。看看张鑫旭大神给我们上的政治课：<a href="http://www.zhangxinxu.com/wordpress/2012/07/bottleneck-css-study/" target="_blank" rel="noopener">http://www.zhangxinxu.com/wordpress/2012/07/bottleneck-css-study/</a> </p>
+<p>先说说百分比，百分比是相对父对象的，这里特性非常好用，很多时候会用在自适应布局上面。浏览器尺寸的改变，就是根节点html的长宽改变，我们可以用%来将浏览器尺寸和元素尺寸联系起来，做到自适应。</p>
+<p>另外一个比较有意思的是auto，auto是很多尺寸值的默认值，也就是由浏览器自动计算。首先是块级元素水平方向的auto，块级元素的margin、border、padding以及content宽度之和等于父元素width。使用auto属性在父元素宽度变化的时候，该元素的宽度也会随之变化。</p>
+<img src="https://images2015.cnblogs.com/blog/933778/201604/933778-20160422153325538-411305977.jpg">
+
+<p>但是当该元素被设为浮动时，该元素的width就变成了内容的宽度了，由内容撑开，也就是所谓的有了包裹性。overflow | position:absolute | float:left/right都可以产生包裹性，替换元素也同样具有包裹性。在具有包裹性的元素上想利用width : auto；来让元素宽度自适应浏览器宽是不行的。</p>
+<img src="https://images2015.cnblogs.com/blog/933778/201604/933778-20160422153326538-861607441.jpg">
+
+<p>高度方向：外边距重叠，外边距auto为0，这两点需要注意。书写方向什么的，接触比较少就不扯了。</p>
+<p>那为什么margin：auto对不能计算垂直方向的值呢？很简单，垂直方向是被设计成可以无限扩展的，内容越多浏览器便产生滚动条来扩展，所以垂直方向都找不到一个计算基准，以此返回一个false，便成了0。</p>
+<p>用处：通过width、height控制大小，各个方向的margin值控制与边界或者其他元素的距离来定位。</p>
+<p>浮动</p>
+<p>目前PC网站大多使用float布局，从成本上考虑大改的概率很小，所以不要说浮动无用，总是会有机会让你维护的！代表网站：淘宝、腾讯、百度，好吧BAT都到齐了。</p>
+<p>浮动听得多了，博客园上关于用浮动布局的介绍也非常的多。浮动原本用于文本环绕，但却在布局被发扬光大，这就是命！我的理解：浮动布局的核心就是让元素脱离普通流，然后使用width/height，margin/padding将元素定位。脱离普通流的元素，就像脱离地心引力一样，与普通流不在一个高度上。这个跟图层的概念类似。高度不同所以可以叠在其他元素上面产生重叠或者使用负边距跑到父元素外，理解了这一点浮动布局就很好理解了。</p>
+<img src="https://images2015.cnblogs.com/blog/933778/201604/933778-20160422153327507-1666485195.jpg">
+
+
+<p> View Code<br>原理非常简单，左右侧边栏定宽并浮动，中部内容区放最后不浮动、默认width：auto并设置相应外边距，让左右侧边栏浮动到上面。注意：子元素设置为浮动之后，父对象的高度就坍塌了，需要设置父对象后的元素清除浮动，这样父对象的高度才能被浮动子元素撑起来了。</p>
+<p>当然，我们也要问一下，为啥父对象高度会坍塌呢？上面也说过了，浮动元素已经脱离了普通流，父对象所在的普通流比喻成地表，那浮动元素就已经上天了。但是父对象还在地表啊，从外太空看浮动元素在父对象里面，但是其实并不在，又怎么能撑开父对象呢？宽度如果我们不设置的话，其实也是为0的，因为父对象里面空空如也，所以宽高为0。</p>
+<p>上天</p>
+<p>要撑开的办法就两个，1是让父对象也上天（。。。你咋不上天呢），2是把浮动元素的边框边界拉下来。</p>
+<p>父对象也上天（即浮动）的话，那就不能实现宽度自适应了。因为float元素的width：auto是包裹内容的，参考前面说的！</p>
+<p>办法2就是在后面的元素里加一个clear语句。说到这个问题就要扯到clear与BFC了，我就不献丑了。传送门：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear</a></p>
+<p>这个三列布局还有个双飞（是双飞翼！想啥呢）的变种，就是在HTML中center部分也就是内容区提到最前面，也就是内容先行渲染。在网络不好的时候，左右双翼能不能出来不要紧，先让主体内容出来！这种想法，明显的优秀工程师思维，但，尼玛的双翼都是广告啊。广告不出来，哪能赚钱养你们这群工程师？所以提出双飞的玉伯才离开了淘宝？？？（纯属意淫，如真属实，当我扯淡，哈哈哈！）</p>
+<p>哈哈哈</p>
+<p>先上码：</p>
+<p> View Code<br>思路：</p>
+<p>1)既然HTML里面要让center放前面，为了让left跑到center前面，那center也必须浮动了，否则因为都是块元素他们会分两行。</p>
+<p>2)浮动之后还要让center宽度自适应，那明显width只能100%，然后在父元素中设width:auto，还有两侧margin，其实也就是父对象宽度自适应，center只是继承content的宽度。</p>
+<p>3)对left使用负的margin让他们浮动到上方去。</p>
+<p>代码里面我用到了一个calc()，这个CSS3带来的计算函数简直酷毙了！本例里如果不使用calc函数，那么就需要wrap左边距为0，left左边距-100%，然后center多加一层子块DIV设置margin-left：100px，可以达到同样的效果！calc函数与百分比配合就足以实现自适应的要求！目前所有的自适应布局都在利用浏览器来为我们计算尺寸，但是有了calc之后我们就可以自己制定规则！单是想想都高潮了吧？</p>
+<p>总结：使用浮动来进行布局，一个比较大的问题是清除浮动。这个可以使用一个after伪类来清除。更大的问题是浮动性像水一样向上流动，难以把握。在元素较多而且元素高度尺寸不一的情况下，单纯使用浮动只能实现上端对齐，这对于适应多种设备的布局就显得力不从心了。目前的做法是牺牲一部分内容，将元素做成等高排列，从美观上看也当然也是极好的，比参差不齐的排列要美观。</p>
+<p>普通流布局</p>
+<p>普通流布局：display : inline-block！这是一个传说中取代float布局的存在。看了一些网站，PC端浮动为主，移动端的也用的不多啊，已经有些使用flex的了，说好的inline-block一统江湖呢？</p>
+<p>使用inline-block之前先处理点小障碍：inline-block元素会有4px左右的空隙，这个是因为我们写代码时候的换行符所致。</p>
+<p>4px间隙</p>
+<p>解决办法很简单：在inline-block的父元素中设置样式font-size：0；letter-spacing: -4px; 然后设置inline-block的所有兄弟元素 font-size：值；letter-spacing: 值px;  恢复正常的显示。</p>
+<p>消除4px间隙</p>
+<p>另外还有一点需要注意的是inline-block默认是基线对齐的，而inline-block的基线又跟文本基线一致，所以在内容不同的时候并不能水平对齐。只需要用vertical-align显式声明一下top/bottom/middle对齐即可。这里补充一下基线的内容，没你想的那么简单哦。分有文字和无文字两种情况：</p>
+<p>1）无文字：容器的margin-bottom下边缘。与容器内部的元素没一毛钱关系。</p>
+<p>2）有文字：最后一行文字的下边缘，跟文字块（p,h等）的margin、padding没关系！注意是最后一行，无论文字在什么子对象容器内在什么位置都没关系，浏览器会找到最后一行文字对齐底部。</p>
+<p>你们感受一下：</p>
+<p>baseline-01    baseline-02    baseline-03</p>
+<p>警示：inline-block的基线是最后一行文字的底部，flex里面的基线是第一行文字的底部（请看下文阮老师的文章）</p>
+<p>baseline-04</p>
+<p>满满的都是泪啊。。。既然都叫baseline，何必呢？</p>
+<p>ohmygod</p>
+<p>使用inline-block进行圣杯布局：</p>
+<p> View Code<br>这里也没什么好说的，用到的也是width：auto和width：100%这两点，简单知识点的简单用法。</p>
+<p>双飞的话，代码跟圣杯的基本相同，注意在html的顺序变为center&gt;right&gt;left，只改左栏移动的margin-left: calc(-100% - 100px)到预定位置即可。不能用calc的话可以在center里面再加一层，跟浮动一样的处理方式。更简单的方法是使用CSS3带给我们的box-sizing属性。请看代码：</p>
+<p> View Code<br>总结：相比浮动inline-block更加容易理解，也更符合我们的认知，结合盒子模型的几个控制属性就可以进行布局了。对于元素高度不同的情况，目前浮动布局的做法都是将元素做成等高元素进行展现，这从美学上看也符合整齐的要求，不过牺牲了一部分内容。但inline-block有vertical-align属性，可以很好地解决元素高度不同而带来的布局问题。用过之后，你也会喜欢上inline-block的。。。至少我会！</p>
+<p>绝对定位</p>
+<p>前面的浮动和普通流中其实定位都是靠盒子模型控制的，与我们常说的定位还是有差别的。而绝对定位就是我们平常所说的定位，给定参考坐标系+坐标确定位置。关于绝对定位的资料太多，我就不说了。提一点就是absolute定位的基准是最近的非static定位父对象，而fixed是相对html根节点的定位。两种定位都会脱离普通流，跟之前说的浮动一样，上天了。</p>
+<p>上天</p>
+<p>当然，他们跟浮动在空间中的位置还是有差别的，项目中有遇到这个问题的请参考张大婶的文章： <a href="http://www.zhangxinxu.com/wordpress/2016/01/understand-css-stacking-context-order-z-index/" target="_blank" rel="noopener">http://www.zhangxinxu.com/wordpress/2016/01/understand-css-stacking-context-order-z-index/</a>  还是要结合项目来看，否则看过也只是看过而已，并不会存到你的脑子里，毕竟还是相当抽象相当理论性的东西。借用张大神的一个总结图：</p>
+<p>2016-01-07_223349</p>
+<p>使用绝对定位（特指absolute）做自适应布局跟前面两种方式没太大差别，宽度自适应还是在auto和100%上做文章，而位置则由top/bottom/left/right等控制。还是以圣杯布局来举例：</p>
+<p> View Code<br>父元素为relative，子元素为absolute，这样的话，又会出现跟浮动一样的问题：父对象高度坍塌，子元素不能撑起父对象。原因也跟浮动一样，解决办法的话目前我知道的只有给父对象指定一个确定height值，大家如果有更好的办法，请联系我！</p>
+<p>总结：单纯使用绝对定位进行自适应布局的情况很少，一般绝对定位都用在尺寸固定的元素定位上。而且fixed定位的渲染效率很低，因为它会频繁触发浏览器的重排。另外提一点：CSS3的transform会对绝对定位产生影响哦~比如说让fixed定位不再固定在浏览器视窗的黑魔法：<a href="http://www.zhangxinxu.com/wordpress/2015/05/css3-transform-affect/" target="_blank" rel="noopener">http://www.zhangxinxu.com/wordpress/2015/05/css3-transform-affect/</a> </p>
+<p>弹性盒子</p>
+<p>CSS3中对布局影响最大的莫过于弹性盒子模块了，这是一套区别于以往盒子模型布局的全新方案。上面几种方法你可以看到，为了实现自适应我们用的都是width：auto和100%的嵌套以及各种边距的移动定位，这套规则并不符合我们的认知。为什么不能开拓出一块区域，横竖排列都可以，内部所有元素的尺寸可以按照一个规则和这个区域的大小联系起来？终于CSS3做出了改变，引入了flex弹性布局方案，弹性盒布局有如下优势：<br>       1.独立的高度控制与对齐。<br>       2.独立的元素顺序。<br>       3.指定元素之间的关系。<br>       4.灵活的尺寸与对齐方式。</p>
+<p>在MDN上有非常简单易懂的基础教程：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes</a></p>
+<p>flexbox</p>
+<p>上面也已经给出了圣杯布局的自适应布局方案，所以代码就不贴了不过这个例子实现的是3栏成比例缩放，左右栏如果需要固定值的话可以写成  flex: 0 0 150px; 的样式。</p>
+<p>但是上面的教程没有给出各个属性的详细解释，建议看看阮一峰的博文，详细易懂而且配图超漂亮的有木有：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>总结：弹性盒子在移动端的应用会越来越普遍，这套模型值得去好好研究。语法规则都是非常贴近人性，非常灵活，浏览器兼容性也非常好，当然国内百花齐放的移动浏览器会有哪些大坑呢？我们拭目以待~</p>
+<p>其他</p>
+<p>其他包括position：relative和CSS3中的transform都可以实现定位，但是由于他们在原来的普通流中还占着一个坑，所以很少用来布局啥的。transform是个很酷炫的东西，可以用平面的素材做出很多3D的效果，而且不需要js就可以做，非常好玩。此文已经很长，就不多说了，以后会写一篇文章来专门说说她的故事。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/17/WEB%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E7%B2%BE%E7%AE%80/" rel="next" title="WEB前端知识体系精简">
+                <i class="fa fa-chevron-left"></i> WEB前端知识体系精简
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/17/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E4%B9%8Bhtml5%E6%96%B0%E7%89%B9%E6%80%A7/" rel="prev" title="前端面试之html5新特性">
+                前端面试之html5新特性 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/1.jpg"
+                alt="White" />
+            
+              <p class="site-author-name" itemprop="name">White</p>
+              <p class="site-description motion-element" itemprop="description">君须知，未见之处，犹多宝藏</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7Carchive">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#这可能是史上最全的CSS自适应布局总结教程"><span class="nav-number">1.</span> <span class="nav-text">这可能是史上最全的CSS自适应布局总结教程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尺寸相关"><span class="nav-number"></span> <span class="nav-text">尺寸相关</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">White</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-heart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">21.1k</span>
+  
+</div>
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共21.1k 字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","hOffset":100,"width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="Vue阶段要学习的内容 Vuejs 基础语法 Vue-router (前端路由组件) Vuex (全局状态管理器) axios (可用在前端&#x2F;Node的请求模块) Vue-cli2 (vue2.x) 脚手架模板 组件库的学习  简介(What)​    它是一个渐进式的前端框架, 底层还是封装的原生JS  ​    渐进式: 由底向上逐级开发组件, 增量开发, 构成我们的应用  为什么学?(Why">
+<meta name="description" content="阶段要学习的内容 Vuejs 基础语法 Vue-router (前端路由组件) Vuex (全局状态管理器) axios (可用在前端&#x2F;Node的请求模块) Vue-cli2 (vue2.x) 脚手架模板 组件库的学习  简介(What)​    它是一个渐进式的前端框架, 底层还是封装的原生JS  ​    渐进式: 由底向上逐级开发组件, 增量开发, 构成我们的应用  为什么学?(Why)​">
 <meta name="keywords" content="君须知，未见之处，犹多宝藏">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初识Vue">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;%E5%88%9D%E8%AF%86Vue&#x2F;index.html">
 <meta property="og:site_name" content="White 的个人博客">
-<meta property="og:description" content="Vue阶段要学习的内容 Vuejs 基础语法 Vue-router (前端路由组件) Vuex (全局状态管理器) axios (可用在前端&#x2F;Node的请求模块) Vue-cli2 (vue2.x) 脚手架模板 组件库的学习  简介(What)​    它是一个渐进式的前端框架, 底层还是封装的原生JS  ​    渐进式: 由底向上逐级开发组件, 增量开发, 构成我们的应用  为什么学?(Why">
+<meta property="og:description" content="阶段要学习的内容 Vuejs 基础语法 Vue-router (前端路由组件) Vuex (全局状态管理器) axios (可用在前端&#x2F;Node的请求模块) Vue-cli2 (vue2.x) 脚手架模板 组件库的学习  简介(What)​    它是一个渐进式的前端框架, 底层还是封装的原生JS  ​    渐进式: 由底向上逐级开发组件, 增量开发, 构成我们的应用  为什么学?(Why)​">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="d:%5Czg%E6%96%87%E6%A1%A3%5C%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5_%E5%A4%87%E8%AF%BE_%E6%9D%8E%E4%B8%9C%E6%97%AD%5Cday03_vue01%5C%E7%A4%BA%E4%BE%8B%5C%E6%B8%90%E8%BF%9B%E5%BC%8F%E8%AE%B2%E8%A7%A3.png">
-<meta property="og:updated_time" content="2019-10-15T00:38:50.162Z">
+<meta property="og:updated_time" content="2019-11-17T08:23:26.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="d:%5Czg%E6%96%87%E6%A1%A3%5C%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5_%E5%A4%87%E8%AF%BE_%E6%9D%8E%E4%B8%9C%E6%97%AD%5Cday03_vue01%5C%E7%A4%BA%E4%BE%8B%5C%E6%B8%90%E8%BF%9B%E5%BC%8F%E8%AE%B2%E8%A7%A3.png">
 
@@ -191,6 +191,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -283,6 +293,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -341,7 +373,7 @@
       
 
       
-        <h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><h4 id="阶段要学习的内容"><a href="#阶段要学习的内容" class="headerlink" title="阶段要学习的内容"></a>阶段要学习的内容</h4><ol>
+        <h4 id="阶段要学习的内容"><a href="#阶段要学习的内容" class="headerlink" title="阶段要学习的内容"></a>阶段要学习的内容</h4><ol>
 <li>Vuejs 基础语法</li>
 <li>Vue-router (前端路由组件)</li>
 <li>Vuex (全局状态管理器)</li>
@@ -576,12 +608,21 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -623,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue"><span class="nav-number">1.</span> <span class="nav-text">Vue</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#阶段要学习的内容"><span class="nav-number">1.1.</span> <span class="nav-text">阶段要学习的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简介-What"><span class="nav-number">1.2.</span> <span class="nav-text">简介(What)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么学-Why"><span class="nav-number">1.3.</span> <span class="nav-text">为什么学?(Why)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怎么学-How"><span class="nav-number">1.4.</span> <span class="nav-text">怎么学?(How)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VueJS注意事项"><span class="nav-number">1.5.</span> <span class="nav-text">VueJS注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装devTool工具"><span class="nav-number">1.6.</span> <span class="nav-text">安装devTool工具</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用VueJS"><span class="nav-number">2.</span> <span class="nav-text">使用VueJS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明式渲染"><span class="nav-number">2.1.</span> <span class="nav-text">声明式渲染</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令"><span class="nav-number">2.2.</span> <span class="nav-text">指令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#v-bind"><span class="nav-number">2.2.1.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-on"><span class="nav-number">2.2.2.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-if"><span class="nav-number">2.2.3.</span> <span class="nav-text">v-if</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-else"><span class="nav-number">2.2.4.</span> <span class="nav-text">v-else</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-show"><span class="nav-number">2.2.5.</span> <span class="nav-text">v-show</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-for"><span class="nav-number">2.2.6.</span> <span class="nav-text">v-for</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-model"><span class="nav-number">2.2.7.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-once"><span class="nav-number">2.2.8.</span> <span class="nav-text">v-once</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件详解"><span class="nav-number">2.3.</span> <span class="nav-text">事件详解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双向数据绑定原理"><span class="nav-number">3.</span> <span class="nav-text">双向数据绑定原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他资料"><span class="nav-number">4.</span> <span class="nav-text">其他资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#阶段要学习的内容"><span class="nav-number">1.</span> <span class="nav-text">阶段要学习的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简介-What"><span class="nav-number">2.</span> <span class="nav-text">简介(What)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么学-Why"><span class="nav-number">3.</span> <span class="nav-text">为什么学?(Why)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怎么学-How"><span class="nav-number">4.</span> <span class="nav-text">怎么学?(How)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VueJS注意事项"><span class="nav-number">5.</span> <span class="nav-text">VueJS注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装devTool工具"><span class="nav-number">6.</span> <span class="nav-text">安装devTool工具</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用VueJS"><span class="nav-number"></span> <span class="nav-text">使用VueJS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明式渲染"><span class="nav-number">1.</span> <span class="nav-text">声明式渲染</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指令"><span class="nav-number">2.</span> <span class="nav-text">指令</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#v-bind"><span class="nav-number">2.1.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-on"><span class="nav-number">2.2.</span> <span class="nav-text">v-on</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-if"><span class="nav-number">2.3.</span> <span class="nav-text">v-if</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-else"><span class="nav-number">2.4.</span> <span class="nav-text">v-else</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-show"><span class="nav-number">2.5.</span> <span class="nav-text">v-show</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-for"><span class="nav-number">2.6.</span> <span class="nav-text">v-for</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-model"><span class="nav-number">2.7.</span> <span class="nav-text">v-model</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-once"><span class="nav-number">2.8.</span> <span class="nav-text">v-once</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件详解"><span class="nav-number">3.</span> <span class="nav-text">事件详解</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双向数据绑定原理"><span class="nav-number"></span> <span class="nav-text">双向数据绑定原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他资料"><span class="nav-number"></span> <span class="nav-text">其他资料</span></a></div>
             
 
           </div>
@@ -657,7 +698,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.8k</span>
+    <span title="Site words total count">21.1k</span>
   
 </div>
 
@@ -665,7 +706,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.8k 字</span>
+  <span class="post-count">博客全站共21.1k 字</span>
 </div>
 
         
